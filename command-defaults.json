@@ -1,0 +1,89 @@
+{
+  "info": {
+    "name": "info",
+    "includeInfoRcon": "true",
+    "description": "Obtenir les informations du serveur",
+    "error": "There was an error while fetching server information.",
+    "embed": {
+      "color": "Greyple",
+      "title": "Serveur Info",
+      "description": "Serveur information",
+      "fields": [
+        {"name": "Redémarrage toutes les 4h", "value": " ", "inline": "false"},
+        {"name": "Serveur Hardcore ", "value": "Disponible : **37.60.237.61:8212** *Steam*", "inline": "true"}
+      ]
+    }
+  },
+  "help": {
+    "name": "help",
+    "description": "tapez /help pour obtenir de l'aide !",
+    "embed": {
+      "color": "Greyple",
+      "title": "Commande d'aide",
+      "description": "Bonjour et bienvenue dans la commande d'aide !",
+      "fields": [
+        {"name": "/broadcast  (mot)", "value": "diffuser un message sur le serveur - fonctionne uniquement avec un mot pour le moment"},
+        {"name": "/onlineplayers", "value": "voir la liste des joueurs actuellement en ligne"},
+        {"name": "/info", "value": "voir des informations importantes sur le serveur"},
+        {"name": "/bara", "value": "affiche tel quel"},
+        {"name": "/save", "value": "enregistrer le monde du serveur dans son état actuel"},
+        {"name": "/ban  (steam id)", "value": "bannir un joueur en utilisant son steamid"},
+        {"name": "/kick  (steam id)", "value": "expulser un joueur en utilisant son steamid"},
+        {"name": "/shutdown (secondes) (messageTexte)", "value": "éteindre le serveur avec un compte à rebours et diffuser dans le chat"},
+        {"name": "/exit", "value": "éteindre le serveur sans avertissement"}
+      ]
+    }
+  },
+  "onlinePlayers": {
+    "name": "onlineplayers",
+    "description": "Affiche les joueurs en ligne actuellement !",
+    "listPlayers": "true",
+    "error": "Une erreur s'est produite lors de la récupération des informations sur les joueurs",
+    "embed": {
+      "color": "Greyple",
+      "title": "Joueurs en ligne",
+      "description": "Joueurs actuellement en ligne (${playercount}/8)"
+    }
+  },
+  "save": {
+    "name": "save",
+    "description": "Enregistre l'état actuel du monde du serveur",
+    "replyContent": "Monde enregistré !",
+    "error": "Une erreur s'est produite lors de l'enregistrement"
+  },
+  "broadcast": {
+    "name": "broadcast",
+    "description": "Diffuse un message sur le serveur !",
+    "inputStringDescription": "Texte du message de diffusion",
+    "replyContent": "Diffusé : ${messageText}",
+    "error": "Une erreur s'est produite lors de la diffusion de ce message !"
+  },
+  "shutdown": {
+    "name": "shutdown",
+    "description": "Éteint le serveur avec un compte à rebours, en diffusant un message",
+    "inputIntegerDescription": "Secondes",
+    "inputStringDescription": "Texte du message de diffusion",
+    "replyContent": "Demande d'extinction réussie !",
+    "error": "Une erreur s'est produite lors de l'extinction !"
+  },
+  "exit": {
+    "name": "exit",
+    "description": "Éteint immédiatement le serveur",
+    "replyContent": "Demande d'arrêt envoyée !",
+    "error": "Une erreur s'est produite lors de l'envoi de la demande d'arrêt"
+  },
+  "kick": {
+    "name": "kick",
+    "description": "Expulse le joueur avec l'ID Steam",
+    "inputStringDescription": "ID Steam",
+    "replyContent": "Le joueur ${playerId} a été expulsé avec succès.",
+    "error": "Erreur lors de l'envoi de la demande d'expulsion"
+  },
+  "ban": {
+    "name": "ban",
+    "description": "Bannit le joueur avec l'ID Steam",
+    "inputStringDescription": "ID Steam",
+    "replyContent": "Le joueur ${playerId} a été banni avec succès.",
+    "error": "Erreur lors de l'envoi de la demande de bannissement"
+  }
+}  
